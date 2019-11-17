@@ -1,0 +1,145 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: url(bg2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  
+}
+
+
+
+
+.A{
+  
+  height: 1200px;  
+ 
+  text-align: center;
+  
+  background-size: 40% 100%;
+  background-color: rgba(72,126,176,.1);;
+  
+  overflow: hidden;
+  
+}
+
+
+.A h1{
+  margin-top: 50px;
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  font-size: 40px;
+}
+
+
+.A input{
+  
+  
+  padding: 0 16px;
+  height: 44px;
+  width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat",sans-serif;
+ 
+}
+
+.txtb{
+  margin: 10px 0;
+  background: rgba(255,255,255,.5);
+  border-radius: 6px;
+}
+
+.txta{
+  height: 46px;
+  margin: 20px 0;
+  background: rgba(76, 126, 173,.8);
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.signup-btn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #487eb0;
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.signup-btn:hover{
+  transform: scale(0.96);
+}
+
+
+.A a{
+  text-decoration: none;
+  color: #fff;
+  font-family: "montserrat",sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.8s;
+  display: block;
+}
+
+
+
+.b{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+
+.b label{
+    position: relative;
+    cursor: pointer;
+}
+.b label input{
+    display: none;
+}
+
+.b label span
+{
+    position: relative;
+    display: inline-block;
+    margin: 10px 9px;
+    padding: 5px;
+    width: 120px; 
+    border: 1px solid #487eb0;
+    color: #5fa6e8;
+    background-color: rgba(95,166,232,.1);
+    border-radius: 4px;
+}
+
+.b label input:checked ~ span
+{
+    color: #fff;
+    background-color: rgba(95,166,232,.5);
+    border: 2px solid #fff;
+}
+
+.b label select
+{
+    position: relative;
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 5px;
+    width: 290px; 
+    border: 1px solid #487eb0;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 20px;
+    border-radius:15px;
+    background-color:#487eb0;
+}
+
+

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -9,9 +8,76 @@ and open the template in the editor.
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+    
+        
+    
+    <script language="JavaScript">
+// Si vous utilisez se script, merci de m'en informer : tecman_one@yahoo.fr
+
+//
+// Ne pouvant contrer le retour arriere du navigateur,
+// ou par d'autres appels ("window.history.back()")
+// le principe est assez simple :
+// Il suffit lors du retour arriere de demander de revenir en avant.
+// 
+// En final, on fait un saut arriére qui commande directement un saut avant.
+// => Retour à la page !
+//
+
+window.history.forward();
+
+// Afin de démontrer le déroulement du processus
+// Cette premiére page en construit (=appel) une autre.
+// Cette page suivante utilise le processus décrit plus haut.
+// 
+// Donc page 1 => page 2 => page 2 ...
+//
+
+// Pour certain navigateur, le processus nécessite l'utilisation
+// de la méthode onUnLoad de la page (déchargement).
+// Ceci explique l'implémentation de 'onunload="window.history.forward();"'
+
+function page() {
+	var w=window.document;
+	w.write("<HTML><HEAD><TITLE>NoBack (episode 2 ET FIN) !</TITLE>");
+	w.write("<script language=\"JavaScript\">window.history.forward();");
+	w.write("<\/SCRIPT>");
+	w.write("</HEAD><body onunload=\"window.history.forward();\">");
+	w.write("<FONT FACE=\"Arial\" SIZE='-1' COLOR=\"blue\">");
+	w.write("<FORM><CENTER>");
+	w.write("Appuyer sur le bouton \"Back\" pour revenir à la page précédente");
+	w.write("<BR><BR><BR>");
+	w.write("<INPUT TYPE=\"button\" value=\"Back\" onClick=\"window.history.go(-1)\">");
+	w.write("<BR><BR><BR>");
+	w.write("Ou cliquez le lien <A HREF=\"javascript:window.history.back()\">Back</A>");
+	w.write("<BR><BR><BR>");
+	w.write("Ou essayez avec le bouton du navigateur.");
+	w.write("</FORM></CENTER></FONT>");
+	w.write("<FONT FACE=\"Arial\" SIZE='-1' COLOR=\"blue\">");
+	w.write("<p align=\"right\">&copy\;<a href=\"mailto\:tecman_one@yahoo.fr?subject");
+	w.write("=Code%20Javascript%20NoBack\"> Tecm@n</a></p></FONT>");
+	w.write("</BODY></HTML>");
+	w.close;
+}
+
+</SCRIPT>
+</HEAD>
+<body onunload="window.history.forward();">
+    <div>index</div>
+        <a href="AfficherProduits.jsp">les produit</a>
+
+<FONT FACE="Arial" SIZE='-1' COLOR="blue">
+<FORM><CENTER>
+Voici une suite de page, sans retour arriere.
+<BR><BR><BR>
+<INPUT TYPE="button" value="Suite" onClick="page();">
+<BR><BR><BR>
+</FORM></CENTER></FONT>
+<FONT FACE="Arial" SIZE='-1' COLOR="blue">
+<p align="right">©<a href="mailto:tecman_one@yahoo.fr?subject=Code%20Javascript%20NoBack"> Tecm@n</a></p>
+</FONT>
+</BODY>
 </html>
